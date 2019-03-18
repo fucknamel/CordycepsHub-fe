@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-11 10:38:45 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-11 12:55:28
+ * @Last Modified time: 2019-03-18 23:27:24
  */
 
 /* 导航主题 */
@@ -19,7 +19,7 @@
     color: #888;
 }
 .nav-side .nav-item.active .link{
-    color: #c60023;
+    color: #009a61;
 }
 /* 右侧内容区 */
 .content.with-nav{

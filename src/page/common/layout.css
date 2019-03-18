@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-04 17:05:16 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-06 11:08:38
+ * @Last Modified time: 2019-03-18 23:25:44
  */
  
 /* css reset */
@@ -48,7 +48,7 @@ input[type='checkbox']{
     text-decoration: none;
 }
 .link:hover{
-    color: #e80012;
+    color: #008151;
 }
 .link-text{
     color: #999;
@@ -63,7 +63,7 @@ input[type='checkbox']{
     line-height: 40px;
     vertical-align: middle;
     border: none;
-    background: #e60023;
+    background: #009a61;
     font-size: 17px;
     font-weight: bold;
     color: #fff;
