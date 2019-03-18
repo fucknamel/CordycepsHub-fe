@@ -2,20 +2,20 @@
  * @Author: LKH 
  * @Date: 2019-03-06 13:12:16 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-19 00:05:07
+ * @Last Modified time: 2019-03-19 00:09:51
  */
 
 require('./index.css');
 
 var _mm = require('util/mm.js');
 var _user = require('service/user-service.js');
-var _cart = require('service/cart-service.js');
+// var _cart = require('service/cart-service.js');
 // 导航
 var nav = {
     init : function(){
         this.bindEvent();
         this.loadUserInfo();
-        this.loadCartCount();
+        // this.loadCartCount();
         return this;
     },
     bindEvent : function(){
@@ -43,14 +43,14 @@ var nav = {
         }, function(errMsg){
             // do nothing
         });
-    },
-    loadCartCount : function(){
-        _cart.getCartCount(function(res){
-            $('.nav .cart-count').text(res || 0);
-        }, function(errMsg){
-            $('.nav .cart-count').text(0);
-        });
     }
+    // loadCartCount : function(){
+    //     _cart.getCartCount(function(res){
+    //         $('.nav .cart-count').text(res || 0);
+    //     }, function(errMsg){
+    //         $('.nav .cart-count').text(0);
+    //     });
+    // }
 };
 
 module.exports = nav.init();
