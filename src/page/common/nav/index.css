@@ -1,0 +1,31 @@
+/*
+ * @Author: LKH 
+ * @Date: 2019-03-06 13:12:13 
+ * @Last Modified by: LKH
+ * @Last Modified time: 2019-03-06 13:23:39
+ */
+ .nav{
+     background: #eee;
+     height: 30px;
+     line-height: 30px;
+ }
+
+ /* 用户部分 */
+ .nav .user{
+     float: left;
+ }
+ .nav .user.login{
+     display: none;
+ }
+ .nav .user .link{
+     margin-right: 5px;
+ }
+ 
+ /* 导航链接部分 */
+ .nav .nav-list{
+     float: right;
+ }
+ .nav .nav-list .nav-item{
+     display: inline-block;
+     margin-right: 5px;
+ }

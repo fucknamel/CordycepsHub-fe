@@ -1,0 +1,22 @@
+/*
+ * @Author: LKH 
+ * @Date: 2019-03-09 12:13:34 
+ * @Last Modified by: LKH
+ * @Last Modified time: 2019-03-09 12:18:19
+ */
+ .footer{
+     padding-bottom: 10px;
+ }
+ .footer .links{
+     text-align: center;
+     color: #666;
+     line-height: 30px;
+ }
+ .footer .links .link{
+     padding: 0 10px;
+ }
+ .footer .copyright{
+     text-align: center;
+     color: #666;
+     line-height: 30px;
+ }

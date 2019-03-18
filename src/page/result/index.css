@@ -1,0 +1,27 @@
+/*
+ * @Author: LKH 
+ * @Date: 2019-03-11 13:18:07 
+ * @Last Modified by: LKH
+ * @Last Modified time: 2019-03-12 14:40:18
+ */
+
+.page-wrap{
+    padding: 30px 0;
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+} 
+.result-con{
+    display: none;
+}
+.result-con .result-title{
+    color: #555;
+}
+.result-con .result-content{
+    margin-top: 20px;
+}
+.result-con .result-content .link{
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+}
