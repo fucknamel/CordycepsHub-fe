@@ -2,7 +2,7 @@
  * @Author: LKH
  * @Date: 2019-02-18 13:35:11
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-19 11:30:58
+ * @Last Modified time: 2019-03-19 16:56:09
  */
 var webpack = require("webpack");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -30,7 +30,8 @@ var config = {
     'index': ["./src/page/index/index.js"],
     'user-login': ["./src/page/user-login/index.js"],
     'user-register': ["./src/page/user-register/index.js"],
-    'result': ["./src/page/result/index.js"]
+    'user-pass-reset': ["./src/page/user-pass-reset/index.js"],
+    'result': ["./src/page/result/index.js"],
   },
   output: {
     path: "./dist",
@@ -68,6 +69,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
   ],
   devServer: {
