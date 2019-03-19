@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-06 13:12:16 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-19 00:09:51
+ * @Last Modified time: 2019-03-19 11:27:08
  */
 
 require('./index.css');
@@ -25,7 +25,7 @@ var nav = {
         });
         // 注册点击事件
         $('.js-register').click(function(){
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         })
         // 退出点击事件
         $('.js-logout').click(function(){
