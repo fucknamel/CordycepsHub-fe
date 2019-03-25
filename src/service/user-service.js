@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-09 10:18:44 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-19 20:47:40
+ * @Last Modified time: 2019-03-25 12:35:46
  */
 
 var _mm = require('util/mm.js');
@@ -85,6 +85,16 @@ var _mm = require('util/mm.js');
     getUserInfo : function(resolve, reject){
         _mm.request({
             url : _mm.getServerUrl('/user/get_user_info.do'),
+            method : 'POST',
+            success : resolve,
+            error : reject
+        });
+    },
+    // 更新个人信息
+    updateUserInfo : function(userInfo, resolve, reject){
+        _mm.request({
+            url : _mm.getServerUrl('/user/update_information.do'),
+            data : userInfo,
             method : 'POST',
             success : resolve,
             error : reject
