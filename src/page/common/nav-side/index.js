@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-11 10:34:37 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-19 20:56:42
+ * @Last Modified time: 2019-03-25 20:07:53
  */
 
 require('./index.css');
@@ -16,7 +16,7 @@ var navSide = {
         navList : [
             {name : 'user-center', desc : '个人中心', href : './user-center.html'},
             {name : 'order-list', desc : '我的订单', href : './order-list.html'},
-            {name : 'pass-update', desc : '修改密码', href : './pass-update.html'},
+            {name : 'user-pass-update', desc : '修改密码', href : './user-pass-update.html'},
             {name : 'about', desc : '关于Cordyceps', href : './about.html'}
         ]
     },

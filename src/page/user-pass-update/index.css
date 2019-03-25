@@ -1,0 +1,24 @@
+/*
+ * @Author: LKH 
+ * @Date: 2019-03-25 12:50:51 
+ * @Last Modified by: LKH
+ * @Last Modified time: 2019-03-25 20:02:19
+ */
+
+ .form-line{
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+.form-line .input{
+    height: 25px;
+    line-height: 25px;
+    width: 200px;
+    font-size: 14px;
+}
