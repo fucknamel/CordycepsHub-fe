@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-06 12:29:08 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-18 23:35:53
+ * @Last Modified time: 2019-03-19 19:31:06
  */
  .nav-simple{
      height: 60px;
@@ -14,4 +14,5 @@
      font-size: 26px;
      font-weight: bold;
      color: #009a61;
+     text-decoration: none;
  }
