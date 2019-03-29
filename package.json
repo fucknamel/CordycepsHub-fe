@@ -4,8 +4,8 @@
   "description": "CordycepsHub front code",
   "main": "index.js",
   "scripts": {
-    "dev": "WEBPACK_DEV=dev webpack-dev-server",
-    "dist": "WEBPACK_DEV=online webpack -p"
+    "dev": "./node_modules/.bin/webpack-dev-server",
+    "dist": "WEBPACK_ENV=online ./node_modules/.bin/webpack -p"
   },
   "repository": {
     "type": "git",

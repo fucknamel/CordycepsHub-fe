@@ -2,7 +2,7 @@
  * @Author: LKH
  * @Date: 2019-02-18 13:35:11
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-25 20:10:15
+ * @Last Modified time: 2019-03-29 15:03:40
  */
 var webpack = require("webpack");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -16,6 +16,7 @@ var getHtmlConfig = function (name, title) {
   return {
     template: './src/view/' + name + '.html',
     filename: 'view/' + name + '.html',
+    favicon: './favicon.ico',
     title: title,
     inject: true,
     hash: true,
@@ -37,8 +38,8 @@ var config = {
     'result': ["./src/page/result/index.js"],
   },
   output: {
-    path: "./dist",
-    publicPath: '/dist',
+    path: __dirname + "/dist/",
+    publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.cordycepshub.com/CordycepsHub-fe/dist/',
     filename: "js/[name].js"
   },
   externals: {
@@ -48,7 +49,14 @@ var config = {
     loaders: [
       { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
       { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
-      { test: /\.string$/, loader: 'html-loader' }
+      {
+        test: /\.string$/,
+        loader: 'html-loader',
+        query: {
+          minimize: true,
+          removeAttributeQuotes: false
+        }
+      }
     ]
   },
   resolve: {
