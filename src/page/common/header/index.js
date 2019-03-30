@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-09 12:29:45 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-10 18:36:22
+ * @Last Modified time: 2019-03-30 21:16:19
  */
 
 require('./index.css')
@@ -11,6 +11,7 @@ var _mm = require('util/mm.js');
 // 通用页4面头部
 var header = {
     init : function(){
+        this.onLoad();
         this.bindEvent();
     },
     onLoad : function(){
