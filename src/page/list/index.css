@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-30 18:53:36 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-30 21:21:07
+ * @Last Modified time: 2019-03-31 16:19:26
  */
 
 /* 排序按钮 */
@@ -84,7 +84,7 @@
 .err-tip{
     height: 60px;
     line-height: 60px;
-    color: #f60;
+    color: #c60023;
     font-size: 16px;
     font-weight: bold;
     text-align: center;

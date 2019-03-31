@@ -1,0 +1,46 @@
+<div class="intro-wrap">
+    <div class="p-img-con">
+        <div class="main-img-con">
+            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
+        </div>
+        <ul class="p-img-list">
+            {{#subImages}}
+            <li class="p-img-item">
+                <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}" />
+            </li>
+            {{/subImages}}
+        </ul>
+    </div>
+    <div class="p-info-con">
+        <p class="p-subtitle">{{subtitle}}</p>
+        <div class="p-info-item p-price-con">
+            <span class="label">价格:</span>
+            <span class="info">￥{{price}}</span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">描述:</span>
+            <span class="info">{{detail}}</span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">长度:</span>
+            <span class="info">{{length}} cm</span>
+        </div>
+        <div class="p-info-item">
+            <span class="label">宽度:</span>
+            <span class="info">{{weight}} cm</span>
+        </div>
+        <div class="p-info-item">
+            <a class="btn digger-info">查看挖掘者信息</a>
+        </div>
+    </div>
+</div>
+<div class="detail-wrap">
+    <div class="detail-tab-con">
+        <ul class="tab-list">
+            <li class="tab-item active">溯源追踪</li>
+        </ul>
+    </div>
+    <div class="detail-con">
+        <div class="loading"></div>
+    </div>
+</div>

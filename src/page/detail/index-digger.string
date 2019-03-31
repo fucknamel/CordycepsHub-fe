@@ -1,0 +1,16 @@
+<p class="p-subtitle">该虫草挖掘者信息为：</p>
+<div class="p-info-item p-price-con">
+    <span class="label">姓名:</span>
+    <span class="info">{{username}}</span>
+</div>
+<div class="p-info-item">
+    <span class="label">邮箱:</span>
+    <span class="info">{{email}}</span>
+</div>
+<div class="p-info-item">
+    <span class="label">电话:</span>
+    <span class="info">{{phone}}</span>
+</div>
+<div class="p-info-item">
+    <a class="btn digger-return">返回</a>
+</div>

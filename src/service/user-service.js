@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-09 10:18:44 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-25 20:09:25
+ * @Last Modified time: 2019-03-31 17:25:53
  */
 
 var _mm = require('util/mm.js');
@@ -86,6 +86,17 @@ var _mm = require('util/mm.js');
         _mm.request({
             url : _mm.getServerUrl('/user/get_user_info.do'),
             method : 'POST',
+            success : resolve,
+            error : reject
+        });
+    },
+    // 获取挖掘者信息
+    getDiggerInfo : function(diggerId, resolve, reject){
+        _mm.request({
+            url : _mm.getServerUrl('/user/get_digger_info.do'),
+            data : {
+                diggerId : diggerId
+            },
             success : resolve,
             error : reject
         });
