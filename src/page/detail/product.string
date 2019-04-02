@@ -40,7 +40,7 @@
             <li class="tab-item active">溯源追踪</li>
         </ul>
     </div>
-    <div class="detail-con">
-        <div class="loading"></div>
+    <div class="transport-con">
+        
     </div>
 </div>

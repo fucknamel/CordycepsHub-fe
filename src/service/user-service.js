@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-09 10:18:44 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-31 17:25:53
+ * @Last Modified time: 2019-04-02 17:07:13
  */
 
 var _mm = require('util/mm.js');
@@ -97,6 +97,7 @@ var _mm = require('util/mm.js');
             data : {
                 diggerId : diggerId
             },
+            method : 'POST',
             success : resolve,
             error : reject
         });

@@ -1,0 +1,34 @@
+{{#notEmpty}}
+<div class="transport-header">
+    <table class="transport-table">
+        <tr>
+            <th class="transport-cell cell-id">ID</th>
+            <th class="transport-cell cell-location">地点</th>
+            <th class="transport-cell cell-longitude">经度</th>
+            <th class="transport-cell cell-latitude">纬度</th>
+            <th class="transport-cell cell-time">最后更新时间</th>
+        </tr>
+    </table>
+</div>
+<div class="transport-list">
+    {{#list}}
+    <table class="transport-table" data-product-id="{{transportId}}">
+        <tr>
+                <th class="transport-cell cell-id">{{transportId}}</th>
+                <th class="transport-cell cell-location">{{location}}</th>
+                <th class="transport-cell cell-longitude">{{longitude}}</th>
+                <th class="transport-cell cell-latitude">{{latitude}}</th>
+                <th class="transport-cell cell-time">{{updateTime}}</th>
+        </tr>
+    </table>
+    {{/list}}
+</div>
+<div class="transport-footer">
+    TODO:增加分页功能
+</div>
+{{/notEmpty}}
+{{^notEmpty}}
+<p class="err-tip">
+    <span>该虫草暂无溯源信息哦</span>
+</p>
+{{/notEmpty}}

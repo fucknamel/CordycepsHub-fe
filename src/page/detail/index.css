@@ -2,34 +2,42 @@
  * @Author: LKH 
  * @Date: 2019-03-31 11:24:38 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-03-31 16:25:54
+ * @Last Modified time: 2019-04-02 16:25:28
  */
 
- /* 图片区 */
-.intro-wrap{
+/* 图片区 */
+
+.intro-wrap {
     overflow: hidden;
 }
-.intro-wrap .p-img-con{
+
+.intro-wrap .p-img-con {
     float: left;
     width: 420px;
 }
+
 /* 主图 */
-.intro-wrap .p-img-con .main-img-con{
+
+.intro-wrap .p-img-con .main-img-con {
     height: 400px;
     border: 1px solid #ddd;
 }
-.intro-wrap .p-img-con .main-img-con .main-img{
+
+.intro-wrap .p-img-con .main-img-con .main-img {
     height: 100%;
     width: 100%;
 }
+
 /* 缩略图 */
-.intro-wrap .p-img-con .p-img-list{
+
+.intro-wrap .p-img-con .p-img-list {
     overflow: hidden;
     height: 76px;
     margin-top: 5px;
     margin-right: -10px;
 }
-.intro-wrap .p-img-con .p-img-item{
+
+.intro-wrap .p-img-con .p-img-item {
     float: left;
     margin-right: 10px;
     width: 72px;
@@ -37,50 +45,62 @@
     border: 2px solid #eee;
     cursor: pointer;
 }
-.intro-wrap .p-img-con .p-img-item:hover{
+
+.intro-wrap .p-img-con .p-img-item:hover {
     border: 2px solid #009a61;
 }
-.intro-wrap .p-img-con .p-img-item .p-img{
+
+.intro-wrap .p-img-con .p-img-item .p-img {
     width: 100%;
     height: 100%;
 }
+
 /* 商品信息 */
-.intro-wrap .p-info-con{
+
+.intro-wrap .p-info-con {
     float: left;
     width: 640px;
     margin-left: 20px;
 }
-.intro-wrap .p-info-con .p-name{
+
+.intro-wrap .p-info-con .p-name {
     font-size: 20px;
     color: #333;
 }
-.intro-wrap .p-info-con .p-subtitle{
+
+.intro-wrap .p-info-con .p-subtitle {
     font-size: 15px;
     color: #009a61;
     line-height: 30px;
 }
-.intro-wrap .p-info-con .p-info-item{
+
+.intro-wrap .p-info-con .p-info-item {
     position: relative;
     padding: 0 10px;
     margin-top: 20px;
 }
-.intro-wrap .p-info-con .p-info-item .label{
+
+.intro-wrap .p-info-con .p-info-item .label {
     display: inline-block;
     width: 50px;
     color: #999;
 }
+
 /* 价格部分 */
-.intro-wrap .p-info-con .p-price-con{
+
+.intro-wrap .p-info-con .p-price-con {
     background: #eee;
     padding: 10px;
 }
-.intro-wrap .p-info-con .p-price-con .info{
+
+.intro-wrap .p-info-con .p-price-con .info {
     color: #c60023;
     font-size: 18px;
 }
 
 /* 按钮部分 */
-.intro-wrap .p-info-con .p-count-con .p-count-btn{
+
+.intro-wrap .p-info-con .p-count-con .p-count-btn {
     position: absolute;
     left: 115px;
     display: block;
@@ -92,23 +112,26 @@
     border: 1px solid #aaa;
     background: #fff;
     cursor: pointer;
-    -moz-user-select : none;
-    -webkit-user-select : none;
-    -ms-user-select : none;
-    user-select : none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* 商品详细信息 */
-.detail-wrap{
+
+.detail-wrap {
     margin-top: 15px;
 }
-.detail-wrap .tab-list{
+
+.detail-wrap .tab-list {
     background: #eee;
     border: 1px solid #ddd;
     overflow: hidden;
     border-bottom: 1px solid #009a61;
 }
-.detail-wrap .tab-list .tab-item{
+
+.detail-wrap .tab-list .tab-item {
     float: left;
     width: 100px;
     height: 50px;
@@ -117,20 +140,86 @@
     text-align: center;
     cursor: pointer;
 }
-.detail-wrap .tab-list .tab-item.active{
+
+.detail-wrap .tab-list .tab-item.active {
     background: #009a61;
     color: #fff;
 }
-.detail-wrap .detail-con{
-    padding-top: 20px;
-    background: #fff;
+
+.detail-wrap .transport-con {
+    background: #f6f6f6;
 }
-.detail-wrap .detail-con img{
-    display: block;
-    margin: 0 auto;
+
+/* transport */
+
+.transport-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin-bottom: 10px;
 }
+
+/* header */
+
+.transport-header {
+    background: #eee;
+}
+
+.transport-header .transport-cell {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/* list */
+.transport-list .transport-cell{
+    height: 20px;
+    line-height: 20px;
+    color: #999; 
+}
+
+.transport-table .cell-id {
+    width: 20%;
+    text-align: center;
+}
+
+.transport-list .transport-table .cell-id {
+    color: #c60023;
+}
+
+.transport-table .cell-location {
+    width: 20%;
+    text-align: center;
+}
+
+.transport-table .cell-longitude {
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.transport-table .cell-latitude {
+    width: 20%;
+    text-align: center;
+}
+
+.transport-table .cell-time {
+    width: 20%;
+    text-align: center;
+}
+
+/* footer */
+
+.transport-footer {
+    position: relative;
+    line-height: 50px;
+    background: #eee;
+    overflow: hidden;
+}
+
 /* 错误信息 */
-.err-tip{
+
+.err-tip {
     height: 60px;
     line-height: 60px;
     color: #c60023;
