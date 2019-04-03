@@ -1,0 +1,44 @@
+<table class="product-list-table header">
+    <tr>
+        <th class="cell cell-img">&nbsp;</th>
+        <th class="cell cell-info">虫草信息</th>
+        <th class="cell cell-subtitle">描述</th>
+        <th class="cell cell-length">长度</th>
+        <th class="cell cell-weight">重量</th>
+    </tr>
+</table>
+{{#list}}
+<table class="product-list-table product-item">
+    <tr>
+        <td colspan="5" class="product-info">
+            <span class="product-text">
+                <span>虫草编号：</span>
+                <a class="link product-num" href="./detail.html?productId={{id}}" target="_blank">{{id}}</a>
+            </span>
+            <span class="product-text">挖掘时间：{{createTime}}</span>
+            <span class="product-text">最后更新时间：{{updateTime}}</span>
+            <span class="product-text">
+                <span>价格：</span>
+                <span class="product-total">￥{{price}}</span>
+            </span>
+            <a class="link product-detail" href="./detail.html?productId={{id}}" target="_blank">查看详情></a>
+        </td>
+    </tr>
+    <tr>
+        <td class="cell cell-img">
+            <a href="./detail.html?productId={{id}}" target="_blank">
+                <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{detail}}" />
+            </a>
+        </td>
+        <td class="cell cell-info">
+            <a class="link" href="./detail.html?productId={{id}}" target="_blank">{{detail}}</a>
+        </td>
+        <td class="cell cell-subtitle">{{subtitle}}</td>
+        <td class="cell cell-length">{{length}} cm</td>
+        <td class="cell cell-weight">{{weight}} g</td>
+    </tr>
+</table>
+{{/list}}
+{{^list}}
+<p class="err-tip">您暂时还没有订单</p>
+{{/list}}
