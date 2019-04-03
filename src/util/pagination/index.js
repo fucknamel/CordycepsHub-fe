@@ -1,8 +1,8 @@
 /*
  * @Author: LKH 
  * @Date: 2019-03-30 20:26:33 
- * @Last Modified by:   LKH 
- * @Last Modified time: 2019-03-30 20:26:33 
+ * @Last Modified by: LKH
+ * @Last Modified time: 2019-04-03 13:18:40
  */
 
 require('./index.css');
@@ -14,7 +14,7 @@ var Pagination = function(){
     this.defaultOption = {
         container       : null,
         pageNum         : 1,
-        pageRange       : 3,
+        pageRange       : 10,
         onSelectPage    : null
     };
     // 事件的处理
@@ -37,9 +37,9 @@ Pagination.prototype.render = function(userOption){
         return;
     }
     // 判断是否只有1页
-    if(this.option.pages <= 1){
-        return;
-    }
+    // if(this.option.pages <= 1){
+    //     return;
+    // }
     // 渲染分页内容
     this.option.container.html(this.getPaginationHtml());
 };

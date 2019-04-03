@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-31 11:24:36 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-04-02 15:47:30
+ * @Last Modified time: 2019-04-03 13:16:44
  */
 
 require('./index.css');
@@ -12,13 +12,18 @@ var _mm                = require('util/mm.js');
 var _product           = require('service/product-service.js');
 var _user              = require('service/user-service.js');
 var _transport         = require('service/transport-service.js');
+var Pagination         = require('util/pagination/index.js');
 var templateProduct    = require('./product.string');
 var templateDigger     = require('./digger.string');
 var templateTransport  = require('./transport.string');
 
 var page = {
     data : {
-        productId : _mm.getUrlParam('productId') || ''
+        listParam : {
+            productId       : _mm.getUrlParam('productId')  || '',
+            pageNum         : _mm.getUrlParam('pageNum')    || 1,
+            pageSize        : _mm.getUrlParam('pageSize')   || 10
+        }
     },
     init : function(){
         this.onLoad();
@@ -26,7 +31,7 @@ var page = {
     },
     onLoad : function(){
         // 如果没有传productId, 自动跳回首页
-        if(!this.data.productId){
+        if(!this.data.listParam.pageNum){
             _mm.goHome();
         }
         this.loadDetail();
@@ -56,11 +61,12 @@ var page = {
     loadDetail : function(){
         var _this       = this,
             html        = '',
+            listParam   = this.data.listParam,
             $pageWrap   = $('.page-wrap');
         // loading
         $pageWrap.html('<div class="loading"></div>');
         // 请求detail信息
-        _product.getProductDetail(this.data.productId, function(res){
+        _product.getProductDetail(listParam.productId, function(res){
             _this.filter(res);
             // 缓存住detail的数据
             _this.data.detailInfo = res;
@@ -76,11 +82,20 @@ var page = {
     // 加载运输信息
     loadTransport : function(){
         var _this           = this,
+            listParam       = this.data.listParam,
             $transportCon   = $('.transport-con');
         // loading
         $transportCon.html('<div class="loading"></div>');
-        _transport.getTransportList(this.data.productId, function(res){
+        _transport.getTransportList(listParam, function(res){
             _this.renderTransport(res);
+            _this.loadPagination({
+                hasPreviousPage : res.hasPreviousPage,
+                prePage         : res.prePage,
+                hasNextPage     : res.hasNextPage,
+                nextPage        : res.nextPage,
+                pageNum         : res.pageNum,
+                pages           : res.pages
+            });
         }, function(errMsg){
             $transportCon.html('<p class="err-tip">' + errMsg + '</p>');
         });
@@ -93,6 +108,18 @@ var page = {
         var transportHtml = _mm.renderHtml(templateTransport, data);
         // 渲染HTML
         $('.transport-con').html(transportHtml);
+    },
+    // 加载分页信息
+    loadPagination : function(pageInfo){
+        var _this = this;
+        this.pagination ? '' : (this.pagination = new Pagination());
+        this.pagination.render($.extend({}, pageInfo, {
+            container : $('.pagination'),
+            onSelectPage : function(pageNum){
+                _this.data.listParam.pageNum = pageNum;
+                _this.loadTransport();
+            }
+        }));
     },
     // 数据匹配
     filter : function(data){

@@ -24,7 +24,9 @@
     {{/list}}
 </div>
 <div class="transport-footer">
-    TODO:增加分页功能
+
+    <!-- 分页容器 -->
+    <div class="pagination"></div>
 </div>
 {{/notEmpty}}
 {{^notEmpty}}
