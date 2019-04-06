@@ -26,8 +26,8 @@
             <span class="info">{{length}} cm</span>
         </div>
         <div class="p-info-item">
-            <span class="label">宽度:</span>
-            <span class="info">{{weight}} cm</span>
+            <span class="label">重量:</span>
+            <span class="info">{{weight}} g</span>
         </div>
         <div class="p-info-item">
             <a class="btn digger-info">查看挖掘者信息</a>
