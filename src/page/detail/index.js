@@ -2,7 +2,7 @@
  * @Author: LKH 
  * @Date: 2019-03-31 11:24:36 
  * @Last Modified by: LKH
- * @Last Modified time: 2019-04-03 13:16:44
+ * @Last Modified time: 2019-04-08 20:06:30
  */
 
 require('./index.css');
@@ -22,7 +22,7 @@ var page = {
         listParam : {
             productId       : _mm.getUrlParam('productId')  || '',
             pageNum         : _mm.getUrlParam('pageNum')    || 1,
-            pageSize        : _mm.getUrlParam('pageSize')   || 10
+            pageSize        : _mm.getUrlParam('pageSize')   || 5
         }
     },
     init : function(){
